@@ -1,8 +1,17 @@
-const router = require('express').Router();
+const router = require("express").Router();
 
-const apiRoutes = require('./api');
+const apiRoutes = require("./api");
 
-//Add additional routes here
-router.use('/api', apiRoutes);
+router.use("/api", apiRoutes);
+router.get("/", (req, res) => {
+  res.render("homePage");
+});
+router.get("/login", (req, res) => {
+  res.render("loginPage");
+});
+router.get("/signup", (req, res) => {
+  res.render("signup");
+});
+
 
 module.exports = router;

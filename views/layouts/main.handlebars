@@ -15,13 +15,14 @@
       <h1>
         
       </h1>
-      <nav>
+    <nav class="navbar">
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
+          <button class="no-button" id="logout">logout</button>
         {{else}}
-        <a href="/login">login</a>
+          <a href="/login">LOGIN</a>
+          <a href="/signup">SIGN UP</a>
+          <a href="/">HOMEPAGE</a>
         {{/if}}
       </nav>
     </header>

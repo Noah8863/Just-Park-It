@@ -9,7 +9,7 @@
     "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
     "passport": "^0.6.0",
-    "sequelize": "^6.20.0",
+    "sequelize": "^6.20.1",
     "validate": "^5.2.0"
   },
   "scripts": {

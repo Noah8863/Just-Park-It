@@ -13,7 +13,8 @@
     "validate": "^5.2.0"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "seed": "node seeds/seed.js"
   },
   "name": "just-park-it",
   "description": "",

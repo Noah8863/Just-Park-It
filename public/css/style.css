@@ -1,9 +1,81 @@
-body{
+body {
+    font-family: 'Rubik', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+input {
+    display:block;
+    width:80%;
+    margin:10px 0;
+    padding:10px;
+}
+.hide{
+    display: none;
+}
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+.login-container {
+    top:20%;
+    left: 0;
+    text-align: center;
+}
+.signup-container {
+    background-image: linear-gradient(rgb(142, 210, 241), rgb(43, 159, 236));
+    right: 0;
+    text-align: center;
+}
+.signup-slider {
+    margin-top: 25%;
+}
+.signup-form {
+    position:absolute;
+    top: 20%;
+    right: 400px;
+    text-align: center;
+}
+.moveside {
+    position: absolute;
+    transform: translate(-800px, 0px);
+    transition: transform .8s ease-in-out;
+}
+.moveback {
+    transform: translate(0px, 0px);
+    transition: transform .8s ease-in-out;
+}
+.form-input {
+    padding: 20px;
+    margin-left: 20px;
+}
+#email-login, #password-login, #name-signup, #email-signup, #password-signup{
+    border-radius:10px;
+    border: 1px solid #eee;
+    transition: .3s border-color;
     
 }
-#loginBtn {
-    background-color: rgb(87, 204, 240);
+#loginbtn {
+    position: relative;
+    background-color: rgb(101, 167, 241);
+    width: 45%;
+    height: 35px;
+    border-radius: 25px;
 }
-#signupBtn {
-    background-color: rgb(38, 189, 38);
+#signupbtn {
+    position: relative;
+    background-color: rgb(101, 167, 241);
+    width: 100%;
+    height: 30px;
+    border-radius: 25px;
+}
+#registerbtn {
+    position: relative;
+    background-color: rgb(101, 167, 241);
+    width: 40%;
+    height: 30px;
+    border-radius: 25px;
 }

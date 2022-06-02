@@ -1,3 +1,7 @@
 [
-  
+  {
+    "description": "This is a test for seeding the file." 
+  }, {
+    "description": "Parking garages are nice when the weather is not nice."
+  }
 ]

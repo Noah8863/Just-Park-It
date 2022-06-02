@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="public/css/style.css">
+</head>
+
+<body>
+    <div class="row split login-container">
+        <div class="col-md-6">
+            <h2>Login to Your Account</h2>
+            <form class="form login-form">
+                <div class="form-group">
+                    <input class="form-input" type="text" id="email-login" placeholder="Email" />
+                </div>
+                <div class="form-group">
+                    <input class="form-input" type="password" id="password-login" placeholder="Password" />
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary" type="submit" id="loginbtn">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="split signup-container" id="signup-container">
+        <div class="signup-slider">
+            <h2>Not A Member?</h2>
+            <button class="btn btn-primary" id="registerbtn">Register Today</button>
+        </div>
+    </div>
+    <form class="form signup-form" id="registerContainer">
+        <h2>Create Account</h2>
+        <div class="form-group">
+            <label for="name-signup">Name:</label>
+            <input class="form-input" type="text" id="name-signup" />
+        </div>
+        <div class="form-group">
+            <label for="email-signup">Email:</label>
+            <input class="form-input" type="text" id="email-signup" />
+        </div>
+        <div class="form-group">
+            <label for="password-signup">Password:</label>
+            <input class="form-input" type="password" id="password-signup" />
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary" type="submit" id="signupbtn">Sign Up</button>
+        </div>
+    </form>
+    <script src="testing.js"></script>
+</body>
+
+</html>

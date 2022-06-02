@@ -1,0 +1,14 @@
+[
+  {
+    "email": "awyimtb@gmail.com",
+    "password": "password1234",
+    "vehicle": "2007 BMW 328xi",
+    "user_age": "49"
+  },
+  {
+    "email": "mmawy@aol.com",
+    "password": "password1234",
+    "vehicle": "2022 Honda Pilot",
+    "user_age": "49"
+  }
+]

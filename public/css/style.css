@@ -9,6 +9,7 @@ input {
     padding:10px;
 }
 .hide{
+    transition: transform .8s ease-in-out;
     display: none;
 }
 .split {
@@ -20,6 +21,37 @@ input {
     overflow-x: hidden;
     padding-top: 20px;
 }
+.signbackin {
+    animation: fadeIn linear 2s;
+    -webkit-animation: fadeIn linear 2s;
+    -moz-animation: fadeIn linear 2s;
+    -o-animation: fadeIn linear 2s;
+    -ms-animation: fadeIn linear 2s;
+}
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+  
+@-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+  
+@-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+  
+@-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+  
+@-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
 .login-container {
     top:20%;
     left: 0;
@@ -30,14 +62,18 @@ input {
     right: 0;
     text-align: center;
 }
+.registerContainer {
+    width:100%;
+}
 .signup-slider {
     margin-top: 25%;
 }
 .signup-form {
     position:absolute;
     top: 20%;
-    right: 400px;
+    right: 10%;
     text-align: center;
+    width: 40%;
 }
 .moveside {
     position: absolute;
@@ -56,7 +92,6 @@ input {
     border-radius:10px;
     border: 1px solid #eee;
     transition: .3s border-color;
-    
 }
 #loginbtn {
     position: relative;
@@ -68,7 +103,7 @@ input {
 #signupbtn {
     position: relative;
     background-color: rgb(101, 167, 241);
-    width: 100%;
+    width: 60%;
     height: 30px;
     border-radius: 25px;
 }
@@ -78,4 +113,30 @@ input {
     width: 40%;
     height: 30px;
     border-radius: 25px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.btn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+  
+.btn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+  
+.btn:hover span {
+    padding-right: 25px;
+}
+  
+.btn:hover span:after {
+    opacity: 1;
+    right: 0;
 }

@@ -15,7 +15,11 @@ const loginFormHandler = async (event) => {
 
     if (response.ok) {
       // If successful, redirect the browser to the profile page
+<<<<<<< HEAD
+      document.location.replace("/users");
+=======
       document.location.replace("/user");
+>>>>>>> 1b43b679618760144ee6af4e52c779423a80bd33
     } else {
       alert(response.statusText);
     }
@@ -38,7 +42,11 @@ const signupFormHandler = async (event) => {
     });
     console.log("success");
     if (response.ok) {
+<<<<<<< HEAD
+      document.location.replace("/users");
+=======
       document.location.replace("/user");
+>>>>>>> 1b43b679618760144ee6af4e52c779423a80bd33
     } else {
       alert(response.statusText);
     }

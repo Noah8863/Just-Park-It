@@ -77,7 +77,7 @@ input {
 }
 .moveside {
     position: absolute;
-    transform: translate(-800px, 0px);
+    transform: translate(-100%, 0px);
     transition: transform .8s ease-in-out;
 }
 .moveback {

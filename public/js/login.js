@@ -56,26 +56,42 @@ document
   .addEventListener("submit", signupFormHandler);
 
 
-  const registerContainer = document.getElementById("registerContainer");
-  const signupContainer = document.getElementById("signup-container");
-  const signupWording = document.getElementById("noMember")
-  const signInText = document.getElementById("signBackIn")
-  const test = document.getElementById("test")
-  
-  registerbtn.addEventListener("click", registerUser)
-  
-  function registerUser() {
-    moveback()
-    signupContainer.classList.toggle("moveside")
-    registerContainer.classList.add("registering")
-    signInText.classList.toggle('hide')
-    signupWording.classList.toggle('hide')
-  
+const registerContainer = document.getElementById("registerContainer");
+const signupContainer = document.getElementById("signup-container");
+const signupWording = document.getElementById("noMember")
+const signInText = document.getElementById("signBackIn")
+const test = document.getElementById("test")
+const backtoLogin = document.getElementById("backtologin")
+const registerButton = document.getElementById("registerbtn")
+
+
+registerbtn.addEventListener("click", registerUser)
+
+
+function registerUser() {
+  moveback()
+  signupContainer.classList.toggle("moveside")
+  registerContainer.classList.add("registering")
+  signInText.classList.toggle('hide')
+  signupWording.classList.toggle('hide')
+  backtoLogin.classList.toggle('hide')
+  registerButton.classList.add('hide')
+
+}
+
+
+
+
+function moveback() {
+  if (registerContainer.classList.contains("registering")) {
+    signupContainer.classList.toggle('moveback')
   }
   
-  
-  function moveback() {
-    if (registerContainer.classList.contains("registering")) {
-      signupContainer.classList.toggle('moveback')
-    }
+  if (registerButton.innerText === "Register Today") {
+    registerButton.innerText = "Back to Login";
+  } else {
+    registerButton.innerText = "Register Today";
   }
+
+}
+

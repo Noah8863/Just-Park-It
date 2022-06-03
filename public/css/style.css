@@ -140,7 +140,12 @@ input {
     opacity: 1;
     right: 0;
 }
-
+#navbar {
+    position: fixed;
+    background-color:rgb(54, 153, 247);
+    width: 5%;
+    height: 100%;
+}
 .review-post {
     display: flex;
     justify-content: center;

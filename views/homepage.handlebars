@@ -1,1 +1,14 @@
 <h1>This is the homepage!</h1>
+<h1 class="home">Login or sign up to create your blog!</h1>
+{{#each reviews as |review| }}
+<div class="review-post">
+  <div class="review-column">
+    <a href="/reviews/{{review.user_id}}">{{format_date review.date_created}}</a>
+  </div>
+  <div class="blog-description">
+    <p>
+      {{review.description}}
+    </p>
+  </div>
+</div>
+{{/each}}

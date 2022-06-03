@@ -1,5 +1,3 @@
-
-
 const loginFormHandler = async (event) => {
   event.preventDefault();
 
@@ -93,5 +91,22 @@ function moveback() {
     registerButton.innerText = "Register Today";
   }
 
+}
+
+
+registerbtn.addEventListener("click", registerUser);
+
+function registerUser() {
+  moveback();
+  signupContainer.classList.toggle("moveside");
+  registerContainer.classList.add("registering");
+  signInText.classList.toggle("hide");
+  signupWording.classList.toggle("hide");
+}
+
+function moveback() {
+  if (registerContainer.classList.contains("registering")) {
+    signupContainer.classList.toggle("moveback");
+  }
 }
 

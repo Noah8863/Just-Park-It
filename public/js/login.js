@@ -19,7 +19,6 @@ const loginFormHandler = async (event) => {
       document.location.replace("/users");
 =======
       document.location.replace("/user");
->>>>>>> 1b43b679618760144ee6af4e52c779423a80bd33
     } else {
       alert(response.statusText);
     }

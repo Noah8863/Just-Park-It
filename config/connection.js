@@ -5,9 +5,9 @@ const sequelize = new Sequelize(
   // Database name
   'parking_db',
   // User
-  'newuser',
+  'root',
   // Password
-  '123456',
+  '1234',
   {
     // Database location
     host: 'localhost',

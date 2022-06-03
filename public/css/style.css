@@ -1,9 +1,142 @@
-body{
-    
+body {
+    font-family: 'Rubik', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
 }
-#loginBtn {
-    background-color: rgb(87, 204, 240);
+input {
+    display:block;
+    width:80%;
+    margin:10px 0;
+    padding:10px;
 }
-#signupBtn {
-    background-color: rgb(38, 189, 38);
+.hide{
+    transition: transform .8s ease-in-out;
+    display: none;
+}
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+.signbackin {
+    animation: fadeIn linear 2s;
+    -webkit-animation: fadeIn linear 2s;
+    -moz-animation: fadeIn linear 2s;
+    -o-animation: fadeIn linear 2s;
+    -ms-animation: fadeIn linear 2s;
+}
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+  
+@-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+  
+@-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+  
+@-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+  
+@-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+.login-container {
+    top:20%;
+    left: 0;
+    text-align: center;
+}
+.signup-container {
+    background-image: linear-gradient(rgb(142, 210, 241), rgb(43, 159, 236));
+    right: 0;
+    text-align: center;
+}
+.registerContainer {
+    width:100%;
+}
+.signup-slider {
+    margin-top: 25%;
+}
+.signup-form {
+    position:absolute;
+    top: 20%;
+    right: 10%;
+    text-align: center;
+    width: 40%;
+}
+.moveside {
+    position: absolute;
+    transform: translate(-800px, 0px);
+    transition: transform .8s ease-in-out;
+}
+.moveback {
+    transform: translate(0px, 0px);
+    transition: transform .8s ease-in-out;
+}
+.form-input {
+    padding: 20px;
+    margin-left: 20px;
+}
+#email-login, #password-login, #name-signup, #email-signup, #password-signup{
+    border-radius:10px;
+    border: 1px solid #eee;
+    transition: .3s border-color;
+}
+#loginbtn {
+    position: relative;
+    background-color: rgb(101, 167, 241);
+    width: 45%;
+    height: 35px;
+    border-radius: 25px;
+}
+#signupbtn {
+    position: relative;
+    background-color: rgb(101, 167, 241);
+    width: 60%;
+    height: 30px;
+    border-radius: 25px;
+}
+#registerbtn {
+    position: relative;
+    background-color: rgb(101, 167, 241);
+    width: 40%;
+    height: 30px;
+    border-radius: 25px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.btn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+  
+.btn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+  
+.btn:hover span {
+    padding-right: 25px;
+}
+  
+.btn:hover span:after {
+    opacity: 1;
+    right: 0;
 }

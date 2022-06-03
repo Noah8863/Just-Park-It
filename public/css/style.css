@@ -140,3 +140,11 @@ input {
     opacity: 1;
     right: 0;
 }
+
+.review-post {
+    display: flex;
+    justify-content: center;
+    border: 3px solid black;
+    margin: auto;
+    width: 600px;
+}

@@ -16,10 +16,12 @@
         <nav class="navbar">
           <!-- Conditionally render login or logout links -->
           {{#if logged_in}}
+            <a href="/dashboard">Dashboard</a>
             <button class="no-button" id="logout">logout</button>
           {{else}}
             <a href="/login">LOGIN</a>
-            <a href="/">HOMEPAGE</a>
+            <a href="/">HOMEPAGE</a> 
+            <a href="/dashboard">Dashboard</a>
           {{/if}}
         </nav>
       </header>

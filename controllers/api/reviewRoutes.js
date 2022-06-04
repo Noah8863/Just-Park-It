@@ -3,13 +3,15 @@ const { Review } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 
-router.post('/', withAuth, async (req, res) => {
+router.post('/',  async (req, res) => {
   try {
     const newReview = await Review.create({
       ...req.body,
+      date_created: Date.now(),
       user_id: req.session.user_id,
+      name: req.session.user_name
     });
-
+    console.log(newReview)
     res.status(200).json(newReview);
   } catch (err) {
     res.status(400).json(err);

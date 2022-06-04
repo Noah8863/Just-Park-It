@@ -15,7 +15,7 @@ const loginFormHandler = async (event) => {
 
     if (response.ok) {
       // If successful, redirect the browser to the profile page
-      document.location.replace("/user");
+      document.location.replace("/");
     } else {
       alert(response.statusText);
     }
@@ -28,7 +28,7 @@ const signupFormHandler = async (event) => {
   const name = document.querySelector("#name-signup").value.trim();
   const email = document.querySelector("#email-signup").value.trim();
   const password = document.querySelector("#password-signup").value.trim();
-
+  console.log(name, email, password);
   if (name && email && password) {
     const response = await fetch("/api/user", {
       method: "POST",
@@ -38,7 +38,7 @@ const signupFormHandler = async (event) => {
     });
     console.log("success");
     if (response.ok) {
-      document.location.replace("/user");
+      document.location.replace("/");
     } else {
       alert(response.statusText);
     }
@@ -53,46 +53,37 @@ document
   .querySelector(".signup-form")
   .addEventListener("submit", signupFormHandler);
 
-
 const registerContainer = document.getElementById("registerContainer");
 const signupContainer = document.getElementById("signup-container");
-const signupWording = document.getElementById("noMember")
-const signInText = document.getElementById("signBackIn")
-const test = document.getElementById("test")
-const backtoLogin = document.getElementById("backtologin")
-const registerButton = document.getElementById("registerbtn")
+const signupWording = document.getElementById("noMember");
+const signInText = document.getElementById("signBackIn");
+const test = document.getElementById("test");
+const backtoLogin = document.getElementById("backtologin");
+const registerButton = document.getElementById("registerbtn");
 
-
-registerbtn.addEventListener("click", registerUser)
-
+registerbtn.addEventListener("click", registerUser);
 
 function registerUser() {
-  moveback()
-  signupContainer.classList.toggle("moveside")
-  registerContainer.classList.add("registering")
-  signInText.classList.toggle('hide')
-  signupWording.classList.toggle('hide')
-  backtoLogin.classList.toggle('hide')
-  registerButton.classList.add('hide')
-
+  moveback();
+  signupContainer.classList.toggle("moveside");
+  registerContainer.classList.add("registering");
+  signInText.classList.toggle("hide");
+  signupWording.classList.toggle("hide");
+  backtoLogin.classList.toggle("hide");
+  registerButton.classList.add("hide");
 }
-
-
-
 
 function moveback() {
   if (registerContainer.classList.contains("registering")) {
-    signupContainer.classList.toggle('moveback')
+    signupContainer.classList.toggle("moveback");
   }
-  
+
   if (registerButton.innerText === "Register Today") {
     registerButton.innerText = "Back to Login";
   } else {
     registerButton.innerText = "Register Today";
   }
-
 }
-
 
 registerbtn.addEventListener("click", registerUser);
 
@@ -109,4 +100,3 @@ function moveback() {
     signupContainer.classList.toggle("moveback");
   }
 }
-

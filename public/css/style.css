@@ -9,7 +9,7 @@ input {
     padding:10px;
 }
 #logo {
-    font-size:medium;
+    font-size:small;
     text-align:center;
 }
 
@@ -32,6 +32,13 @@ input {
     -moz-animation: fadeIn linear 2s;
     -o-animation: fadeIn linear 2s;
     -ms-animation: fadeIn linear 2s;
+}
+.expandedText {
+    animation: fadeIn linear 4s;
+    -webkit-animation: fadeIn linear 4s;
+    -moz-animation: fadeIn linear 4s;
+    -o-animation: fadeIn linear 4s;
+    -ms-animation: fadeIn linear 4s;
 }
 @keyframes fadeIn {
     0% {opacity:0;}
@@ -148,16 +155,16 @@ input {
 .sidebar {
     position: fixed;
     background-image: linear-gradient(rgb(142, 210, 241), rgb(43, 159, 236));
-    top:0%;
-    width: 10%;
-    height: 30%;
+    top:30%;
+    width: 6%;
+    height: 28%;
     transition: 0.5s;
 }
 .sidebarExpanded {
     position: fixed;
     background-image: linear-gradient(rgb(142, 210, 241), rgb(43, 159, 236));;
     top: 0%;
-    width: 15%;
+    width: 10%;
     height: 100%;
     transition: 0.5s;
 }

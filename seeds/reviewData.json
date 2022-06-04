@@ -1,7 +1,9 @@
 [
   {
+    "name": "Billy Bob",
     "description": "This is a test for seeding the file." 
   }, {
+    "name": "Carl Sagan",
     "description": "Parking garages are nice when the weather is not nice."
   }
 ]

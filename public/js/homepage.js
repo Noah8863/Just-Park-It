@@ -41,15 +41,15 @@ function expandNavbar(){
         newPostBtn.classList.add('navBtnExpanded')
         contactBtn.classList.add('navBtnExpanded')
 
-        // homeText.classList.remove('hide')
-        // profileText.classList.remove('hide')
-        // newText.classList.remove('hide')
-        // contactText.classList.remove('hide')
+        homeText.classList.remove('hide')
+        profileText.classList.remove('hide')
+        newText.classList.remove('hide')
+        contactText.classList.remove('hide')
 
-        // homeText.classList.add('fadeIn')
-        // profileText.classList.add('fadeIn')
-        // newText.classList.add('fadeIn')
-        // contactText.classList.add('signbackin')
+        homeText.classList.add('expandedText')
+        profileText.classList.add('expandedText')
+        newText.classList.add('expandedText')
+        contactText.classList.add('expandedText')
         //Figure out which classes we need to fade in the text
     } else {
         //Removing text if the sidebar is not expanded
@@ -69,6 +69,11 @@ function expandNavbar(){
         profileBtn.classList.remove('navBtnExpanded')
         newPostBtn.classList.remove('navBtnExpanded')
         contactBtn.classList.remove('navBtnExpanded')
+
+        homeText.classList.add('hide')
+        profileText.classList.add('hide')
+        newText.classList.add('hide')
+        contactText.classList.add('hide')
     }
 }
 

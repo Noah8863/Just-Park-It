@@ -8,6 +8,11 @@ input {
     margin:10px 0;
     padding:10px;
 }
+#logo {
+    font-size:medium;
+    text-align:center;
+}
+
 .hide{
     transition: transform .8s ease-in-out;
     display: none;
@@ -140,11 +145,37 @@ input {
     opacity: 1;
     right: 0;
 }
-#navbar {
+.sidebar {
     position: fixed;
-    background-color:rgb(54, 153, 247);
-    width: 5%;
+    background-image: linear-gradient(rgb(142, 210, 241), rgb(43, 159, 236));
+    top:0%;
+    width: 10%;
+    height: 30%;
+    transition: 0.5s;
+}
+.sidebarExpanded {
+    position: fixed;
+    background-image: linear-gradient(rgb(142, 210, 241), rgb(43, 159, 236));;
+    top: 0%;
+    width: 15%;
     height: 100%;
+    transition: 0.5s;
+}
+.navBtn {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+    transition: 0.5s;
+}
+.fa-address-card {
+    margin-bottom: 0;
+}
+.navBtnExpanded {
+    position: relative;
+    width: 100%;
+    margin-top: 30%;
+    margin-bottom: 30%; 
+    transition: 0.5s;
 }
 .review-post {
     display: flex;
@@ -152,4 +183,82 @@ input {
     border: 3px solid black;
     margin: auto;
     width: 600px;
+}
+.displaytoggle {
+    position: relative;
+    bottom: 10px;
+}
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 24px;
+    top: 2px;
+    left:55px;
+}
+  
+  /* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+  /* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider {
+    background-color: #000000;
+}
+  
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(34px);
+}
+  
+  /* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
+.newsfeedContainer {
+    display: grid;
+    grid-template-columns: 10% auto 10%;
+    background-color: grey
+}
+.newsfeed {
+    position: relative;
+    background-color: grey;
+    width: 100%;
+    height: 100%;
 }

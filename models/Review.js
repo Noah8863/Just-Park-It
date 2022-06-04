@@ -36,7 +36,7 @@ Reviews.init(
         freezeTableName: true,
         underscored: true,
         modelName: 'review',
-    }
+    },
 
   {
     id: {

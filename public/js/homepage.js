@@ -137,5 +137,5 @@ commentBtn.addEventListener('click', showComments)
 //Displaying the comments function for CCS
 function showComments() {
     commentsContainer.classList.remove('hide')
-    
+    commentBtn.innerHTML = "Hide Comments"
 }

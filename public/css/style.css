@@ -195,6 +195,12 @@ input {
     margin: auto;
     width: 600px;
 }
+
+.review-post .review-name {
+    display: flex;
+    justify-content: start;
+}
+
 .displaytoggle {
     position: relative;
     top: 43%;

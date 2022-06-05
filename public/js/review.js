@@ -1,5 +1,3 @@
-
-
 const reviewHandler = async (event) => {
   event.preventDefault();
   
@@ -21,5 +19,10 @@ const reviewHandler = async (event) => {
     console.log("something went wrong")
   }
 };
+
+const addComment =  async (event) => {
+  event.preventDefault();
+  
+}
 
 document.querySelector("#review-input").addEventListener("submit", reviewHandler)

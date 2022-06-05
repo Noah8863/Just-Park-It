@@ -184,7 +184,7 @@ input {
     margin-bottom: 30%; 
     transition: 0.5s;
 }
-.review-post {
+/* .review-post {
     display: flex;
     justify-content: center;
     border: 3px solid black;
@@ -195,7 +195,7 @@ input {
 .review-post .review-name {
     display: flex;
     justify-content: start;
-}
+} */
 
 .displaytoggle {
     position: relative;

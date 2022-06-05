@@ -50,6 +50,8 @@ function expandNavbar(){
         profileText.classList.add('expandedText')
         newText.classList.add('expandedText')
         contactText.classList.add('expandedText')
+
+        nightDaySwitch.classList.remove('hide')
         //Figure out which classes we need to fade in the text
     } else {
         //Removing text if the sidebar is not expanded
@@ -74,6 +76,8 @@ function expandNavbar(){
         profileText.classList.add('hide')
         newText.classList.add('hide')
         contactText.classList.add('hide')
+
+        nightDaySwitch.classList.add('hide')
     }
 }
 

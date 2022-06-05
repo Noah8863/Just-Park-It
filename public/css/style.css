@@ -1,6 +1,12 @@
 body {
     font-family: 'Rubik', sans-serif;
     font-family: 'Source Sans Pro', sans-serif;
+    opacity: 1;
+    transition-duration: 0.8s;
+    transition-property: opacity;
+}
+body.fade {
+    opacity: 0;
 }
 input {
     display:block;
@@ -12,7 +18,6 @@ input {
     font-size:small;
     text-align:center;
 }
-
 .hide{
     transition: transform .8s ease-in-out;
     display: none;
@@ -39,6 +44,7 @@ input {
     -moz-animation: fadeIn linear 4s;
     -o-animation: fadeIn linear 4s;
     -ms-animation: fadeIn linear 4s;
+    text-align: center;
 }
 @keyframes fadeIn {
     0% {opacity:0;}
@@ -153,7 +159,7 @@ input {
     right: 0;
 }
 .sidebar {
-    position: fixed;
+    position:fixed;
     background-image: linear-gradient(rgb(142, 210, 241), rgb(43, 159, 236));
     top:30%;
     width: 6%;
@@ -161,8 +167,8 @@ input {
     transition: 0.5s;
 }
 .sidebarExpanded {
-    position: fixed;
-    background-image: linear-gradient(rgb(142, 210, 241), rgb(43, 159, 236));;
+    position:fixed;
+    background-image: linear-gradient(rgb(142, 210, 241), rgb(43, 159, 236));
     top: 0%;
     width: 10%;
     height: 100%;
@@ -179,9 +185,7 @@ input {
 }
 .navBtnExpanded {
     position: relative;
-    width: 100%;
-    margin-top: 30%;
-    margin-bottom: 30%; 
+    width: 100%; 
     transition: 0.5s;
 }
 .review-post {
@@ -191,9 +195,17 @@ input {
     margin: auto;
     width: 600px;
 }
+
+.review-post .review-name {
+    display: flex;
+    justify-content: start;
+}
+
 .displaytoggle {
     position: relative;
-    bottom: 10px;
+    top: 43%;
+    right: 15%;
+    
 }
 /* The switch - the box around the slider */
 .switch {
@@ -259,13 +271,45 @@ input:checked + .slider:before {
     border-radius: 50%;
 }
 .newsfeedContainer {
-    display: grid;
-    grid-template-columns: 10% auto 10%;
-    background-color: grey
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
 }
 .newsfeed {
-    position: relative;
-    background-color: grey;
-    width: 100%;
+    border-color: white;
+    text-align: center;
+    position:relative;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 1%;
+    background-image: linear-gradient(rgb(142, 210, 241), rgb(43, 159, 236));
     height: 100%;
+}
+.postInfo {
+    position: relative;
+    margin: 2%;
+    padding: 15px;
+    background-color: white;
+}
+.helpfulContainer {
+    position: absolute;
+    text-align: end;
+    background-color: white;
+}
+#addCommentBtn {
+    background-color: rgb(82, 255, 47);
+    
+}
+#viewComments {
+    margin-left: 4%;
+    text-decoration: none;
+}
+.commentsContainer {
+    position: relative;
+    margin: 2%;
+    padding: 15px;
+    background-color: white;
+}
+.comments {
+    background-color: grey;
 }

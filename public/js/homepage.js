@@ -1,3 +1,14 @@
+//Grabbing the whole body and removing/adding the fade class to load in the page
+
+document.addEventListener("DOMContentLoaded", () => {
+    window.setTimeout(function () {
+        document.body.classList.remove('fade');
+    }, 230);
+});
+document.body.classList.add('fade');
+
+
+//Navbar container being grabbed
 const navbar = document.getElementById('navbar');
 const expandbtn = document.getElementById('expandbtn');
 
@@ -8,19 +19,26 @@ const newPostBtn = document.getElementById('newPostBtn');
 const contactBtn = document.getElementById('contactBtn');
 const nightDaySwitch = document.getElementById('switch');
 
-//Grabbing all the text fonts from under the buttons
+//Grabbing all the text from the buttons
 const homeText = document.getElementById('homeText');
 const profileText = document.getElementById('profileText');
 const newText = document.getElementById('postText');
 const contactText = document.getElementById('contactText');
 
+const thumbsUp = document.getElementById('helpful-thumbs-up');
+const thumbsDown = document.getElementById('helpful-thumbs-down')
+
+//Comment section elements
+const commentsContainer = document.getElementById('commentContainer')
+const commentBtn = document.getElementById('viewComments')
+
 expandbtn.addEventListener('click', expandNavbar)
 
-function expandNavbar(){
+function expandNavbar() {
     //Using toggle as an "on-off" statement
-    navbar.classList.toggle('sidebarExpanded') 
-    
-    if (navbar.classList.contains('sidebarExpanded')){
+    navbar.classList.toggle('sidebarExpanded')
+
+    if (navbar.classList.contains('sidebarExpanded')) {
         //Adding text to the buttons if the sidebar is expanded
         homeBtn.innerHTML = '  Home'
         profileBtn.innerHTML = '  Profile'
@@ -51,8 +69,9 @@ function expandNavbar(){
         newText.classList.add('expandedText')
         contactText.classList.add('expandedText')
 
+        //Show the nightmode switch only when the navbar is expanded
         nightDaySwitch.classList.remove('hide')
-        //Figure out which classes we need to fade in the text
+
     } else {
         //Removing text if the sidebar is not expanded
         homeBtn.innerHTML = ''
@@ -81,3 +100,42 @@ function expandNavbar(){
     }
 }
 
+//Fire the functions that are called when each button is clicked
+thumbsUp.addEventListener('click', helpful)
+thumbsDown.addEventListener('click', nothelpful)
+
+
+//Fire the function every time each button is clicked to check the status its in
+thumbsUp.addEventListener('click', compare)
+thumbsDown.addEventListener('click', compare)
+
+function helpful() {
+    if (thumbsUp.classList.contains('fa-regular')) {
+        thumbsUp.classList.toggle('fa-solid')
+    }
+}
+
+function nothelpful() {
+    if (thumbsDown.classList.contains('fa-regular')) {
+        thumbsDown.classList.toggle('fa-solid')
+    }
+}
+
+//This function is fired every time the buttons are clicked to compare the two status
+//By keeping fa-regular constantly and only toggling the fa-solid class, it creates an "on/off" switch that we can check for
+//to update that buttons status. Future features would be to check which button was clicked last if both were clicked and 
+//only update the opposite button status. Not both
+function compare() {
+    if (thumbsDown.classList.contains('fa-solid') && thumbsUp.classList.contains('fa-solid')) {
+        thumbsUp.classList.remove('fa-solid')
+        thumbsDown.classList.remove('fa-solid')
+    }
+}
+
+commentBtn.addEventListener('click', showComments)
+
+//Displaying the comments function for CCS
+function showComments() {
+    commentsContainer.classList.remove('hide')
+    
+}

@@ -22,12 +22,11 @@
             <a href="/login">LOGIN</a>
             <a href="/">HOMEPAGE</a> 
             <a href="/dashboard">Dashboard</a>
-            <a href="/reviews/id:"></a>
           {{/if}}
         </nav>
       </header>
       <main class="container container-fluid mt-5">
-        <!-- Render the sub layout -->
+        <!-- Insert handlebar pages -->
         {{{body}}}
       </main>
       <footer>
@@ -35,7 +34,6 @@
       </footer>
     </div>
 
-    <!-- Render script for logged in users only -->
     {{#if logged_in}}
     <script src="/js/logout.js"></script>
     {{/if}}

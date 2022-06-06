@@ -1,17 +1,4 @@
-{{!-- {{#each reviews as |review| }}
-<div class="review-post">
-  <div class="review-column">
-    <a href="/reviews/{{review.user_id}}">{{format_date review.date_created}}-Click to comment</a>
-  </div>
-  <div class="blog-description">
-    <div class="review-name">
-       <h4> Reviewed by-{{review.name}}</h4>
-    </div>
-   <p>{{review.description}}</p>
-  </div>
-</div>
-{{/each}} --}}
-
+{{!-- map reviews --}}
 {{#each reviews as |review| }}
 <div class="review-post">
   <div class="review-column">

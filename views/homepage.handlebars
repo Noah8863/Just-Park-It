@@ -15,7 +15,7 @@
 
       <!-- Buttons for the Icons to do different things -->
       <!-- href element ready for routes -->
-      <a href="#"><button class="fa-solid fa-house navBtn" id="houseBtn"></button></a>
+      <a href="/dashboard.handlebars"><button class="fa-solid fa-house navBtn" id="houseBtn"></button></a>
       <p class="hide" id="homeText">Smile... You're going Home</p>
       <a href="#"><button class="fa-solid fa-image-portrait navBtn" id="profileBtn"></button></a>
       <p class="hide" id="profileText">Update the Canvas of Yourself</p>
@@ -42,6 +42,6 @@
       </div>
     </div>
   </div>
-<script src="public/js/homepage.js"></script>
+{{/each}}
+<script src="./js/homepage.js"></script>
 <script src="https://kit.fontawesome.com/78de80bbe9.js" crossorigin="anonymous"></script>
-  {{/each}}

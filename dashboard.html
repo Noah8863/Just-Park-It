@@ -4,15 +4,13 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="public/css/style.css">
-    
-
 </head>
 
-<body>
+<body style="background-color: rgb(245, 245, 245);">
     <nav class="sidebar" id="navbar">
         <h3 id="logo">Just Park It!</h3>
 
-        <a href="#"><button class="fa-solid fa-grip-lines navBtn" id="expandbtn"></button></a>
+        <a href="#"><button type="button" class="fa-solid fa-grip-lines navBtn" id="expandbtn"></button></a>
 
         <!-- Buttons for the Icons to do different things -->
         <!-- href element ready for routes -->
@@ -34,8 +32,58 @@
 
     <div class="newsfeedContainer">
         <div class="newsfeed">
-            
+            <h1>Title goes here {{Title}}</h1>
+            <p>Account Name Here {{username}}</p>
+            <p class="postInfo">
+                {{Data}} <br>
+                more data <br>
+                more data <br>
+                more data <br>
+                more data <br>
+                more data <br>
+                more data <br>
+            </p>
+            <p style="display: inline-block;" class="helpfulContainter">Was This Post Helpful?
+                <button id='helpful-thumbs-up' class="fa-regular fa-thumbs-up"></button>
+                <button id='helpful-thumbs-down' class="fa-regular fa-thumbs-down"></button>
+            </p>
+            <a href="#" class="" id="viewComments">Comment Section</a>
+            <div class=" addComment">
+                <input style="display: inline-block" class="form-input" type="text" id="addComment"
+                    placeholder="Add A Comment">
+                <button class="addCommentBtn" id="addCommentBtn">Post</button>
         </div>
+        <div class="commentsContainer hide" id="commentContainer">
+            <p class="comments" id="comments">
+                {{Data}} <br>
+                more data <br>
+                more data <br>
+                more data <br>
+                more data <br>
+                more data <br>
+                more data <br>
+            </p>
+            <p class="comments" id="comments">
+                {{Data}} <br>
+                more data <br>
+                more data <br>
+                more data <br>
+                more data <br>
+                more data <br>
+                more data <br>
+            </p>
+            <p class="comments" id="comments">
+                {{Data}} <br>
+                more data <br>
+                more data <br>
+                more data <br>
+                more data <br>
+                more data <br>
+                more data <br>
+            </p>
+        </div>
+        </div>
+        
     </div>
 
     <script src="public/js/homepage.js"></script>

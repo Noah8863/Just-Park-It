@@ -1,11 +1,11 @@
 //Grabbing the whole body and removing/adding the fade class to load in the page
 
-document.addEventListener("DOMContentLoaded", () => {
-    window.setTimeout(function () {
-        document.body.classList.remove('fade');
-    }, 230);
-});
-document.body.classList.add('fade');
+// document.addEventListener("DOMContentLoaded", () => {
+//     window.setTimeout(function () {
+//         document.body.classList.remove('fade');
+//     }, 230);
+// });
+// document.body.classList.add('fade');
 
 
 //Navbar container being grabbed

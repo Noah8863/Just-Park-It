@@ -1,7 +1,6 @@
 <div class="row">
   <div class="dashboard">
-
-    <h2>Welcome, {{userData.name}}!</h2>
+    <h2>Welcome, {{req.session.user_name}}!</h2>
   </div>
 </div>
 <h1 class="review">Create your review</h1>
@@ -16,4 +15,5 @@
 
   <button id="review-btn" type="submit">Submit</button>
 </form>
+
 <script src="./js/review.js"></script>

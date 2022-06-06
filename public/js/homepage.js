@@ -1,4 +1,3 @@
-
 const navbar = document.getElementById("navbar");
 const expandbtn = document.getElementById("expandbtn");
 
@@ -37,79 +36,72 @@ function expandNavbar() {
     const newText = document.getElementById('postText');
     const contactText = document.getElementById('contactText');
 
-    
+    if (navbar.classList.contains("sidebarExpanded")) {
+        //Adding text to the buttons if the sidebar is expanded
+        homeBtn.innerHTML = "  Home";
+        profileBtn.innerHTML = "  Profile";
+        newPostBtn.innerHTML = "  New Post";
+        contactBtn.innerHTML = "  Contact";
+
+        //Remove the navBtn class to strip all styles from the buttons
+        //Can't use toggle as it wouldn't be able to flip between two classes
+        //The buttons would only be able to have no style or one style
+        homeBtn.classList.remove("navBtn");
+        profileBtn.classList.remove("navBtn");
+        newPostBtn.classList.remove("navBtn");
+        contactBtn.classList.remove("navBtn");
+
+        //Add a new style class to it
+        homeBtn.classList.add("navBtnExpanded");
+        profileBtn.classList.add("navBtnExpanded");
+        newPostBtn.classList.add("navBtnExpanded");
+        contactBtn.classList.add("navBtnExpanded");
 
 
-        if (navbar.classList.contains("sidebarExpanded")) {
-            //Adding text to the buttons if the sidebar is expanded
-            homeBtn.innerHTML = "  Home";
-            profileBtn.innerHTML = "  Profile";
-            newPostBtn.innerHTML = "  New Post";
-            contactBtn.innerHTML = "  Contact";
+        homeText.classList.remove("hide");
+        profileText.classList.remove("hide");
+        newText.classList.remove("hide");
+        contactText.classList.remove("hide");
 
-            //Remove the navBtn class to strip all styles from the buttons
-            //Can't use toggle as it wouldn't be able to flip between two classes
-            //The buttons would only be able to have no style or one style
-            homeBtn.classList.remove("navBtn");
-            profileBtn.classList.remove("navBtn");
-            newPostBtn.classList.remove("navBtn");
-            contactBtn.classList.remove("navBtn");
+        homeText.classList.add('expandedText')
+        profileText.classList.add('expandedText')
+        newText.classList.add('expandedText')
+        contactText.classList.add('expandedText')
 
-            //Add a new style class to it
-            homeBtn.classList.add("navBtnExpanded");
-            profileBtn.classList.add("navBtnExpanded");
-            newPostBtn.classList.add("navBtnExpanded");
-            contactBtn.classList.add("navBtnExpanded");
+        //Show the nightmode switch only when the navbar is expanded
+        nightDaySwitch.classList.remove('hide')
 
+    } else {
 
-            homeText.classList.remove("hide");
-            profileText.classList.remove("hide");
-            newText.classList.remove("hide");
-            contactText.classList.remove("hide");
+        homeText.classList.add("expandedText");
+        profileText.classList.add("expandedText");
+        newText.classList.add("expandedText");
+        contactText.classList.add("expandedText");
 
-            homeText.classList.add('expandedText')
-            profileText.classList.add('expandedText')
-            newText.classList.add('expandedText')
-            contactText.classList.add('expandedText')
+        //Removing text if the sidebar is not expanded
+        homeBtn.innerHTML = "";
+        profileBtn.innerHTML = "";
+        newPostBtn.innerHTML = "";
+        contactBtn.innerHTML = "";
+        nightDaySwitch.classList.add("hide");
 
-            //Show the nightmode switch only when the navbar is expanded
-            nightDaySwitch.classList.remove('hide')
-
-        } else {
-
-            homeText.classList.add("expandedText");
-            profileText.classList.add("expandedText");
-            newText.classList.add("expandedText");
-            contactText.classList.add("expandedText");
-
-            //Removing text if the sidebar is not expanded
-            homeBtn.innerHTML = "";
-            profileBtn.innerHTML = "";
-            newPostBtn.innerHTML = "";
-            contactBtn.innerHTML = "";
-            nightDaySwitch.classList.add("hide");
-
-            //Same as above just opposit
-            homeBtn.classList.add("navBtn");
-            profileBtn.classList.add("navBtn");
-            newPostBtn.classList.add("navBtn");
-            contactBtn.classList.add("navBtn");
+        //Same as above just opposite
+        homeBtn.classList.add("navBtn");
+        profileBtn.classList.add("navBtn");
+        newPostBtn.classList.add("navBtn");
+        contactBtn.classList.add("navBtn");
 
 
-            homeBtn.classList.remove("navBtnExpanded");
-            profileBtn.classList.remove("navBtnExpanded");
-            newPostBtn.classList.remove("navBtnExpanded");
-            contactBtn.classList.remove("navBtnExpanded");
+        homeBtn.classList.remove("navBtnExpanded");
+        profileBtn.classList.remove("navBtnExpanded");
+        newPostBtn.classList.remove("navBtnExpanded");
+        contactBtn.classList.remove("navBtnExpanded");
 
-            homeText.classList.add("hide");
-            profileText.classList.add("hide");
-            newText.classList.add("hide");
-            contactText.classList.add("hide");
-            nightDaySwitch.classList.add('hide')
-        }
+        homeText.classList.add("hide");
+        profileText.classList.add("hide");
+        newText.classList.add("hide");
+        contactText.classList.add("hide");
+        nightDaySwitch.classList.add('hide')
     }
-
-
-
-
+}
 

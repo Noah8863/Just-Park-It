@@ -130,7 +130,8 @@ input {
 #password-login,
 #name-signup,
 #email-signup,
-#password-signup {
+#password-signup, 
+#confirm-passowrd {
   border-radius: 10px;
   border: 1px solid #eee;
   transition: 0.3s border-color;
@@ -334,4 +335,28 @@ input:checked + .slider:before {
 }
 .comments {
   background-color: grey;
+}
+#addressContainer {
+  position: relative;
+  display:inline-block;
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+#typeOfCarContainer {
+  position: relative;
+  display: inline-block;
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+#sizeOfCarContainer {
+  position: relative;
+  display: inline-block;
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+#title {
+  font-size: xx-large;
 }

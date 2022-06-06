@@ -1,7 +1,7 @@
 
 const navbar = document.getElementById("navbar");
 const expandbtn = document.getElementById("expandbtn");
-=======
+
 //Grabbing the whole body and removing/adding the fade class to load in the page
 
 // document.addEventListener("DOMContentLoaded", () => {
@@ -90,7 +90,7 @@ function expandNavbar() {
     profileText.classList.remove("hide");
     newText.classList.remove("hide");
     contactText.classList.remove("hide");
-=======
+
         homeText.classList.add('expandedText')
         profileText.classList.add('expandedText')
         newText.classList.add('expandedText')

@@ -1,19 +1,90 @@
-<div class="row">
-  <div class="dashboard">
-    <h2>Welcome, {{req.session.user_name}}!</h2>
+<link rel="stylesheet" href="/css/style.css">
+<div class="nav-body">
+  <div class="navigation">
+    <ul>
+      <li class="list active">
+        <a href="/">
+          <span class="icon">
+            <i class="fa-solid fa-house"></i>
+          </span>
+          <span class="text">Home</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="/dashboard">
+          <span class="icon">
+            <i class="fa-solid fa-square-plus"></i>
+          </span>
+          <span class="text">New Post</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#">
+          <span class="icon">
+            <i class="fa-solid fa-user"></i>
+          </span>
+          <span class="text">Profile</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="https://github.com/Noah8863/Just-Park-It" target="_blank">
+          <span class="icon">
+            <i class="fa-solid fa-address-book"></i>
+          </span>
+          <span class="text">Contact</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="/login">
+          <span class="icon">
+            <i class="fa-solid fa-person-walking-arrow-right"></i>
+          </span>
+          <span class="text">Logout</span>
+        </a>
+      </li>
+      {{!-- Need more big fixing for the indicator to work --}}
+      {{!-- <div class="indicator"></div> --}}
+    </ul>
   </div>
 </div>
-<h1 class="review">Create your review</h1>
-<form id="review-input">
-  <textarea
-    id="text-area"
-    name="text-area"
-    rows="10"
-    cols="100"
-    form="review-input"
-  ></textarea>
-
-  <button id="review-btn" type="submit">Submit</button>
-</form>
-
+<div class="row">
+  <div class="dashboard1">
+    <h2>Welcome, {{userData.name}}!</h2>
+  </div>
+</div>
+<div class="dashboard">
+  <h1 class="review-questions">List the address where you parked</h1>
+  <form id="review-input">
+    <input id="text-area" name="text-area" form="review-input"></input>
+    <button id="review-questions" type="submit">Submit</button>
+  </form>
+  <h1 class="car-type">What type of car do you have?</h1>
+  <form id="review-input">
+    <input id="text-area" name="text-area" form="review-input"></input>
+    <button id="review-btn" type="submit">Submit</button>
+  </form>
+  <h1 class="car-size">What size of car do you have?</h1>
+  <label for="cars">Choose a car size:</label>
+  <select name="cars" id="cars">
+    <option value="compact">Compact</option>
+    <option value="mid-size">Mid-Size</option>
+    <option value="full-size">Full-Size</option>
+    <option value="suv">SUV</option>
+    <option value="truck">Truck</option>
+  </select>
+  <br><br>
+  <input type="submit" id="review-btn" value="Submit">
+  </form>
+  <h1 class="review-questions">List any attractions nearby</h1>
+  <form id="review-input">
+    <input id="text-area" name="text-area" form="review-input"></input>
+    <button id="review-questions" type="submit">Submit</button>
+  </form>
+  <h1 class="review-questions">Write your full review here</h1>
+  <form id="review-input">
+    <textarea id="text-area" name="text-area" rows="10" cols="100" form="review-input"></textarea>
+    <button id="review-questions" type="submit">Submit</button>
+  </form>
+</div>
 <script src="./js/review.js"></script>
+<script src="https://kit.fontawesome.com/78de80bbe9.js" crossorigin="anonymous"></script>

@@ -1,38 +1,62 @@
 {{!-- map reviews --}}
 {{!-- map reviews --}}
 {{#each reviews as |review| }}
-<div class="review-post">
-  <div class="review-column">
-
-    <nav class="sidebar" id="navbar">
-      <h3 id="logo">Just Park It!</h3>
-
-      <a href="#"><button type="button" class="fa-solid fa-grip-lines navBtn" id="expandbtn"></button></a>
-
-      <!-- Buttons for the Icons to do different things -->
-      <!-- href element ready for routes -->
-
-      <a href="/dashboard.handlebars"><button class="fa-solid fa-house navBtn" id="houseBtn"></button></a>
-      <p class="hide" id="homeText">Smile... You're going Home</p>
-      <a href="#"><button class="fa-solid fa-image-portrait navBtn" id="profileBtn"></button></a>
-      <p class="hide" id="profileText">Update the Canvas of Yourself</p>
-      <a href="#"><button class="fa-solid fa-circle-plus navBtn" id="newPostBtn"></button></a>
-      <p class="hide" id="postText">Stick a new Post</p>
-      <a href="#"><button class="fa-solid fa-address-card navBtn" id="contactBtn"></button></a>
-      <p class="hide" id="contactText">Contact the Dev Team</p>
-      <div class="displaytoggle hide" id="switch">
-        <label class="switch">
-          <input type="checkbox">
-          <span class="slider round"></span>
-        </label>
+    <div class="nav-body">
+      <div class="navigation">
+        <ul>
+          <li class="list active">
+            <a href="/">
+              <span class="icon">
+                <i class="fa-solid fa-house"></i>
+              </span>
+              <span class="text">Home</span>
+            </a>
+          </li>
+          <li class="list">
+            <a href="/dashboard">
+              <span class="icon">
+                <i class="fa-solid fa-square-plus"></i>
+              </span>
+              <span class="text">New Post</span>
+            </a>
+          </li>
+          <li class="list">
+            <a href="#">
+              <span class="icon">
+                <i class="fa-solid fa-user"></i>
+              </span>
+              <span class="text">Profile</span>
+            </a>
+          </li>
+          <li class="list">
+            <a href="https://github.com/Noah8863/Just-Park-It" target="_blank">
+              <span class="icon">
+                <i class="fa-solid fa-address-book"></i>
+              </span>
+              <span class="text">Contact</span>
+            </a>
+          </li>
+          <li class="list">
+            <a href="/login">
+              <span class="icon">
+                <i class="fa-solid fa-person-walking-arrow-right"></i>
+              </span>
+              <span class="text">Logout</span>
+            </a>
+          </li>
+          {{!-- <div class="indicator"></div> --}}
+        </ul>
       </div>
-    </nav>
-
-    <div class="newsfeedContainer">
+    </div>
+<div class="newsfeedContainer">
       <div class="newsfeed">
-        {{format_date review.date_created}}
-        <h1>{{Title}}</h1>
-        <p>{{review.name}}</p>
+        <h1 id="title">{{Title}} This is where the Title Goes</h1>
+        <h2>{{review.name}}</h2>
+        <a>{{format_date review.date_created}} </a> <br>
+        {{!-- If we have time lets add a href to the anchor tag so the address will be clickable --}}
+        <a id="addressContainer">Address Here</a>
+        <p id="sizeOfCarContainer">Size of Car Here</p>
+        <p id="typeOfCarContainer">Type of Car Here</p>
         <p class="postInfo">
           {{review.description}}
         </p>

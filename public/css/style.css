@@ -2,7 +2,7 @@ body {
   font-family: "Rubik", sans-serif;
   font-family: "Source Sans Pro", sans-serif;
   opacity: 1;
-  transition-duration: 0.8s;
+  transition-duration: 1.8s;
   transition-property: opacity;
 }
 body.fade {
@@ -37,14 +37,6 @@ input {
   -moz-animation: fadeIn linear 2s;
   -o-animation: fadeIn linear 2s;
   -ms-animation: fadeIn linear 2s;
-}
-.expandedText {
-  animation: fadeIn linear 4s;
-  -webkit-animation: fadeIn linear 4s;
-  -moz-animation: fadeIn linear 4s;
-  -o-animation: fadeIn linear 4s;
-  -ms-animation: fadeIn linear 4s;
-  text-align: center;
 }
 @keyframes fadeIn {
   0% {
@@ -183,49 +175,100 @@ input {
   opacity: 1;
   right: 0;
 }
-.sidebar {
-  position: fixed;
+:root {
+  --clr: #222327;
+}
+.nav-body{
+  display: flex;
+  justify-content: center;
+}
+.navigation {
+  margin: 0px;
+  width: 400px;
+  height: 70px;
+  background: #fff;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  border-radius: 50px;
   background-image: linear-gradient(rgb(142, 210, 241), rgb(43, 159, 236));
-  top: 30%;
-  width: 6%;
-  height: 28%;
-  transition: 0.5s;
 }
-.sidebarExpanded {
-  position: fixed;
-  background-image: linear-gradient(rgb(142, 210, 241), rgb(43, 159, 236));
-  top: 0%;
-  width: 10%;
-  height: 100%;
-  transition: 0.5s;
+.navigation ul {
+  display: flex;
+  width: 400px;
 }
-.navBtn {
+.navigation ul li {
+  margin-left:-10px;
+  margin-right:20px;
+  top: 20px;
   position: relative;
-  width: 100%;
-  margin-bottom: 20px;
-  transition: 0.5s;
+  list-style: none;
+  width: 70px;
+  height: 70px;
+  z-index: 1;
 }
-.fa-address-card {
-  margin-bottom: 0;
-}
-.navBtnExpanded {
+.navigation ul li a {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  flex-direction:column;
   width: 100%;
+  text-align: center;
+  font-weight: 500;
+}
+.navigation ul li a .icon {
+  position: relative;
+  display: block;
+  line-height: 75px;
+  font-size: 1.5em;
+  text-align: center;
+  transition: 0.5s;
+  color: var(--clr);
+}
+.navigation ul li:hover a .icon {
+  transform: translateY(-25px);
+}
+.navigation ul li a .text {
+  position: absolute;
+  color: var(--clr);
+  font-weight: 400;
+  font-size: 0.75em;
+  letter-spacing: 0.05em;
+  transition: 0.8s;
+  opacity: 0;
+  transform: translateY(20px);
+}
+.navigation ul li:hover a .text {
+  opacity: 1;
+  transform: translateY(5px);
+}
+.indicator {
+  position: absolute;
+  top: 5%;
+  left: 36%;
+  width: 70px;
+  height: 70px;
+  background:rgb(101, 167, 241);
+  border-radius: 50%;
+  border: 6px solid var(--clr);
   transition: 0.5s;
 }
-/* .review-post {
-    display: flex;
-    justify-content: center;
-    border: 3px solid black;
-    margin: auto;
-    width: 600px;
+.navigation ul li:nth-child(1).active ~ .indicator {
+  transform: translatex(calc(70px * 0));
 }
-
-.review-post .review-name {
-    display: flex;
-    justify-content: start;
-} */
-
+.navigation ul li:nth-child(2).active ~ .indicator {
+  transform: translatex(calc(85px * 1));
+}
+.navigation ul li:nth-child(3).active ~ .indicator {
+  transform: translatex(calc(83px * 2));
+}
+.navigation ul li:nth-child(4).active ~ .indicator {
+  transform: translatex(calc(82px * 3));
+}
+.navigation ul li:nth-child(5).active ~ .indicator {
+  transform: translatex(calc(80px * 4));
+}
 .displaytoggle {
   position: relative;
   top: 43%;
@@ -313,28 +356,12 @@ input:checked + .slider:before {
   position: relative;
   margin: 2%;
   padding: 15px;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
 }
 .helpfulContainer {
   position: absolute;
   text-align: end;
   background-color: white;
-}
-#addCommentBtn {
-  background-color: rgb(82, 255, 47);
-}
-#viewComments {
-  margin-left: 4%;
-  text-decoration: none;
-}
-.commentsContainer {
-  position: relative;
-  margin: 2%;
-  padding: 15px;
-  background-color: white;
-}
-.comments {
-  background-color: grey;
 }
 #addressContainer {
   position: relative;
@@ -359,4 +386,12 @@ input:checked + .slider:before {
 }
 #title {
   font-size: xx-large;
+}
+.dashboard {
+  border-color: white;
+  text-align: center;
+  position: relative;
+  background-image: linear-gradient(rgb(142, 210, 241), rgb(43, 159, 236));
+  height: 100%;
+  margin: 0;
 }

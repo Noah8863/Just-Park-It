@@ -33,12 +33,6 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    vehicle: {
-      type: DataTypes.STRING,
-    },
-    user_age: {
-      type: DataTypes.INTEGER,
-    },
   },
   {
     hooks: {

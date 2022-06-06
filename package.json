@@ -8,6 +8,7 @@
     "express-handlebars": "^6.0.6",
     "express-session": "^1.17.3",
     "mysql2": "^2.2.5",
+    "nodemon": "^2.0.16",
     "passport": "^0.6.0",
     "sequelize": "^6.3.5",
     "validate": "^5.2.0"

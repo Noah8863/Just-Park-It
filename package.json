@@ -12,7 +12,8 @@
     "nodemon": "^2.0.16",
     "passport": "^0.6.0",
     "sequelize": "^6.3.5",
-    "validate": "^5.2.0"
+    "validate": "^5.2.0",
+    "velocity-animate": "^2.0.6"
   },
   "scripts": {
     "start": "node server.js",

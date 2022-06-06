@@ -29,9 +29,13 @@
 
     <div class="newsfeedContainer">
       <div class="newsfeed">
-        {{format_date review.date_created}}
-        <h1>{{Title}}</h1>
-        <p>{{review.name}}</p>
+        <h1 id="title">{{Title}} This is where the Title Goes</h1>
+        <h2>{{review.name}}</h2>
+        <a>{{format_date review.date_created}} </a> <br>
+        {{!-- If we have time lets add a href to the anchor tag so the address will be clickable --}}
+        <a id="addressContainer">Address Here</a>
+        <p id="sizeOfCarContainer">Size of Car Here</p>
+        <p id="typeOfCarContainer">Type of Car Here</p>
         <p class="postInfo">
           {{review.description}}
         </p>

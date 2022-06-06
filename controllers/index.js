@@ -25,6 +25,9 @@ router.get("/signup", (req, res) => {
 router.get("/dashboard", (req, res) => {
   res.render("dashboard");
 });
+router.get("/reviews", (req, res) => {
+  res.render("Reviews");
+});
 
 
 module.exports = router;

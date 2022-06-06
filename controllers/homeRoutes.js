@@ -10,6 +10,8 @@ router.get("/", async (req, res) => {
         {
           model: User,
           attributes: ["name"],
+          foreignKey: "id",
+          as: "user",
         },
       ],
     });

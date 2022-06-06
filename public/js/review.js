@@ -1,3 +1,10 @@
+document.addEventListener("DOMContentLoaded", () => {
+  window.setTimeout(function () {
+      document.body.classList.remove('fade');
+  }, 230);
+});
+document.body.classList.add('fade');
+
 const reviewHandler = async (event) => {
   event.preventDefault();
 
@@ -28,7 +35,10 @@ document
   .querySelector("#review-input")
   .addEventListener("submit", reviewHandler);
 
-  //Code snippet for the navbar 
+
+
+//Code snippet for the navbar 
+
 const list = document.querySelectorAll('.list');
 
 function activeLink (){

@@ -130,7 +130,8 @@ input {
 #password-login,
 #name-signup,
 #email-signup,
-#password-signup {
+#password-signup, 
+#confirm-passowrd {
   border-radius: 10px;
   border: 1px solid #eee;
   transition: 0.3s border-color;

@@ -63,29 +63,6 @@ function expandNavbar() {
         newText.classList.remove("hide");
         contactText.classList.remove("hide");
 
-<<<<<<< HEAD
-    //Remove the navBtn class to strip all styles from the buttons
-    //Can't use toggle as it wouldn't be able to flip between two classes
-    //The buttons would only be able to have no style or one style
-    homeBtn.classList.remove("navBtn");
-    profileBtn.classList.remove("navBtn");
-    newPostBtn.classList.remove("navBtn");
-    contactBtn.classList.remove("navBtn");
-
-    //Add a new style class to it
-    homeBtn.classList.add("navBtnExpanded");
-    profileBtn.classList.add("navBtnExpanded");
-    newPostBtn.classList.add("navBtnExpanded");
-    contactBtn.classList.add("navBtnExpanded");
-
-
-    homeText.classList.remove("hide");
-    profileText.classList.remove("hide");
-    newText.classList.remove("hide");
-    contactText.classList.remove("hide");
-
-=======
->>>>>>> 0900481810e7beea5387a44b0337bd7156d53e1f
         homeText.classList.add('expandedText')
         profileText.classList.add('expandedText')
         newText.classList.add('expandedText')

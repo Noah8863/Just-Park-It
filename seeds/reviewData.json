@@ -1,9 +1,9 @@
 [
   {
-    "name": "Billy Bob",
+    "user_id": 1,
     "description": "This is a test for seeding the file." 
   }, {
-    "name": "Carl Sagan",
+    "user_id": 2,
     "description": "Parking garages are nice when the weather is not nice."
   }
 ]

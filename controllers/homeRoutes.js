@@ -5,11 +5,13 @@ const withAuth = require("../utils/auth");
 router.get("/", async (req, res) => {
   try {
     // Get all reviews and JOIN with user data
-    const reviewData = await Reviews.findAll({
+    const reviewData = await Review.findAll({
       include: [
         {
           model: User,
           attributes: ["name"],
+          foreignKey: "id",
+          as: "user",
         },
       ],
     });
@@ -76,7 +78,7 @@ router.get("/login", (req, res) => {
     return;
   }
 
-  res.render("login");
+  res.render("loginPage");
 });
 
 module.exports = router;

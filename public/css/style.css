@@ -429,7 +429,7 @@ textarea,
 select {
   font-family: "Poppins-Regular";
   font-size: 15px;
-  color: #fff;
+  color: rgb(0, 0, 0);
 }
 .btn {
   padding-right: 20px;

@@ -1,3 +1,8 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 body {
   font-family: "Rubik", sans-serif;
   font-family: "Source Sans Pro", sans-serif;
@@ -387,11 +392,399 @@ input:checked + .slider:before {
 #title {
   font-size: xx-large;
 }
-.dashboard {
-  border-color: white;
+#text-area {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#cardForm {
+  display: flex;
+  justify-content: center;
+}
+#welcomeName {
   text-align: center;
-  position: relative;
-  background-image: linear-gradient(rgb(142, 210, 241), rgb(43, 159, 236));
-  height: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+:focus {
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+input,
+textarea,
+select {
+  font-family: "Poppins-Regular";
+  font-size: 15px;
+  color: black;
+}
+.btn {
+  padding-right: 20px;
+  transition: 0.5;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
   margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+textarea {
+  resize: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+#stepper-form {
+  width: 100%;
+  padding-left: 100px;
+  padding-right: 100px;
+  align-self: center;
+  transition: all 0.3s ease;
+}
+
+.form-header {
+  text-align: center;
+}
+
+#stepper-form a {
+  font-family: "Poppins-Regular";
+  color: #fff;
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 5px;
+  background: #e4bd37;
+}
+
+h3 {
+  font-family: "Poppins-SemiBold";
+  font-size: 22px;
+  text-transform: uppercase;
+  margin-bottom: 46px;
+  letter-spacing: 3px;
+  margin-top: 19px;
+  page-break-after: auto;
+}
+
+.left-card{
+  padding: 10px;
+}
+#stepper-form {
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 47px 57px 50px 50px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+#step-1, #step-2, #step-3 {
+  transition: all 0.5s ease;
+}
+
+.form-control {
+  height: 41px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: none;
+  border-radius: 5px;
+  width: 100%;
+  padding: 0 18px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.form-control:focus {
+  box-shadow: 0px 0px 7px 0px rgba(255, 255, 255, 0.7);
+  border: 1px solid #ceebf7;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.form-control::-moz-placeholder {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.form-control:-ms-input-placeholder {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.form-control:-moz-placeholder {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+select.form-control {
+  text-transform: uppercase;
+}
+
+.actions ul {
+  display: flex;
+  margin-top: 39px;
+  justify-content: space-between;
+}
+/* Show inputs values li */
+.list-group-item{
+  padding: 10px;
+}
+/* Social media icons */
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 20px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 15px;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+@-webkit-keyframes hvr-icon-wobble-horizontal {
+  16.65% {
+      -webkit-transform: translateX(6px);
+      transform: translateX(6px);
+  }
+
+  33.3% {
+      -webkit-transform: translateX(-5px);
+      transform: translateX(-5px);
+  }
+
+  49.95% {
+      -webkit-transform: translateX(4px);
+      transform: translateX(4px);
+  }
+
+  66.6% {
+      -webkit-transform: translateX(-2px);
+      transform: translateX(-2px);
+  }
+
+  83.25% {
+      -webkit-transform: translateX(1px);
+      transform: translateX(1px);
+  }
+
+  100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+  }
+}
+
+@keyframes hvr-icon-wobble-horizontal {
+  16.65% {
+      -webkit-transform: translateX(6px);
+      transform: translateX(6px);
+  }
+
+  33.3% {
+      -webkit-transform: translateX(-5px);
+      transform: translateX(-5px);
+  }
+
+  49.95% {
+      -webkit-transform: translateX(4px);
+      transform: translateX(4px);
+  }
+
+  66.6% {
+      -webkit-transform: translateX(-2px);
+      transform: translateX(-2px);
+  }
+
+  83.25% {
+      -webkit-transform: translateX(1px);
+      transform: translateX(1px);
+  }
+
+  100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+  }
+}
+
+.checkbox-circle {
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkbox-circle label {
+  cursor: pointer;
+  display: inline-block;
+  padding-left: 23px;
+  position: relative;
+  margin-right: 0;
+  width: auto;
+}
+
+.checkbox-circle input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkbox-circle input:checked~.checkmark:after {
+  display: block;
+}
+
+.checkbox-circle .checkmark {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.checkbox-circle .checkmark:after {
+  content: "";
+  top: 3px;
+  left: 3px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  display: none;
+}
+
+@media (max-width: 1500px) {
+  #stepper-form {
+      padding-top: 50px;
+      padding-bottom: 60px;
+      align-self: flex-start;
+  }
+
+  .container {
+      height: auto;
+  }
+}
+
+@media (max-width: 1199px) {
+  .main {
+      height: 100vh;
+      width: auto;
+  }
+
+  .image-holder {
+      align-self: center;
+  }
+
+  .image-holder img {
+      transform: translateY(40px);
+  }
+
+  #stepper-form {
+      padding-top: 0;
+      padding-bottom: 0;
+      padding-left: 10px;
+      padding-right: 10px;
+      align-self: center;
+  }
+}
+
+@media (max-width: 991px) {
+  .main {
+      justify-content: center;
+  }
+
+  .image-holder {
+      display: none;
+  }
+
+  #stepper-form {
+      width: auto;
+  }
+  .col-md-6 {
+      width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+      height: auto;
+  }
+  .col-md-6 {
+      width: 100%;
+  }
+  #footerImg img{
+      display: none;
+  }
+
+  .container {
+      height: auto;
+      padding: 30px 20px;
+  }
+  .icon-bar {
+      display: none;
+  }
+
+  #stepper-form,
+  #wizard {
+      padding: 0;
+  }
+
+  h3 {
+      margin-bottom: 30px;
+  }
+
+  .form-group {
+      display: block;
+  }
+
+  .form-group label {
+      margin-bottom: 29px;
+      display: block;
+  }
+
+  .form-group label,
+  .form-group .form-holder {
+      width: 100%;
+  }
+
+  .checkbox-circle {
+      display: block;
+  }
 }

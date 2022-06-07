@@ -1,5 +1,4 @@
-{{!-- map reviews --}}
-{{!-- map reviews --}}
+<h1 class="logo">Just Park It!</h1>
 <div class="nav-body">
       <div class="navigation">
         <ul>
@@ -36,7 +35,7 @@
             </a>
           </li>
           <li class="list">
-            <a href="/login">
+            <a href="/login" id="logout">
               <span class="icon">
                 <i class="fa-solid fa-person-walking-arrow-right"></i>
               </span>
@@ -48,16 +47,29 @@
       </div>
     </div>
 {{#each reviews as |review| }}
-    
+
 <div class="newsfeedContainer">
+  <div class="profileContainer">
+    <h2>{{review.name}}</h2> <br>
+    <a> Post Made At: {{format_date review.date_created}} </a> <br>
+    <p id="sizeOfCarContainer">{{review.carSize}}</p>
+    <p id="typeOfCarContainer">{{review.name}} Drives A: {{review.carMake}}</p>
+  </div>
       <div class="newsfeed">
-        <h1 id="title">{{Title}} This is where the Title Goes</h1>
-        <h2>{{review.name}}</h2>
-        <a>{{format_date review.date_created}} </a> <br>
+        <h1 id="titleText">{{title}}</h1>
+
+
+
+       
         {{!-- If we have time lets add a href to the anchor tag so the address will be clickable --}}
-        <a id="addressContainer">Address Here</a>
-        <p id="sizeOfCarContainer">Size of Car Here</p>
-        <p id="typeOfCarContainer">Type of Car Here</p>
+        <a id="addressContainer" href="http://www.google.com/search?q={{review.address}}" target="_blank">{{review.address}}</a> <br>
+        {{!-- Couldnt figure out the mechanics behind this system --}}
+        {{!-- <a class="fa fa-star" id="1starFinal"></a>
+        <a class="fa fa-star" id='2starFinal'></a>
+        <a class="fa fa-star" id="3starFinal"></a>
+        <a class="fa fa-star" id="4staFinalr"></a>
+        <a class="fa fa-star" id="5staFinalr"></a> --}}
+        <p id="parkingType">{{review.parkingType}}</p>
         <p class="postInfo">
           {{review.description}}
         </p>

@@ -1,20 +1,80 @@
-<link rel="stylesheet" href="/css/style.css">
+<h1 class="logo">Just Park It!</h1>
+<div class="nav-body">
+  <div class="navigation">
+    <ul>
+      <li class="list active">
+        <a href="/">
+          <span class="icon">
+            <i class="fa-solid fa-house"></i>
+          </span>
+          <span class="text">Home</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="/dashboard">
+          <span class="icon">
+            <i class="fa-solid fa-square-plus"></i>
+          </span>
+          <span class="text">New Post</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#">
+          <span class="icon">
+            <i class="fa-solid fa-user"></i>
+          </span>
+          <span class="text">Profile</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="https://github.com/Noah8863/Just-Park-It" target="_blank">
+          <span class="icon">
+            <i class="fa-solid fa-address-book"></i>
+          </span>
+          <span class="text">Contact</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="/login">
+          <span class="icon">
+            <i class="fa-solid fa-person-walking-arrow-right"></i>
+          </span>
+          <span class="text">Logout</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
 <div class="row">
   <div class="dashboard">
     <h2>Welcome, {{user_name}}!</h2>
+    <h1 class="review">Create your review</h1>
+    <form id="review-input">
+      <lable>Enter a title for this review</lable>
+      <input id="title" name="title">
+      <lable>Enter in the type of car you drive</lable>
+      <input id="carMake" name="text-area" form="review-input"></input>
+      <lable>Enter the size of your car</lable>
+      <input id="carSize" name="text-area" form="review-input"></input>
+      <lable>Enter the type of parking</lable>
+      <input id="parkingType" name="text-area" form="review-input"></input>
+      <lable>Enter in the address</lable>
+      <input id="address" name="text-area" form="review-input"></input>
+      <div class="reviewContainer">
+        <h3>Main Review</h3>
+        <textarea id="review" rows="10" cols='90' form="review-input"></textarea>
+      </div>
+      {{!-- Couldnt get this figured out in time --}}
+        {{!-- <h2>Star Rating</h2>
+        <a onclick="rating1();" class="fa fa-star" id="1star"></a>
+        <a onclick="rating2();" class="fa fa-star" id='2star'></a>
+        <a onclick="rating3();" class="fa fa-star" id="3star"></a>
+        <a onclick="rating4();" class="fa fa-star" id="4star"></a>
+        <a onclick="rating5();" class="fa fa-star" id="5star"></a> --}}
+        <br><button id="review-btn" type="submit">Submit</button>
+    </form>
   </div>
 </div>
-<h1 class="review">Create your review</h1>
-<form id="review-input">
-  <textarea
-    id="text-area"
-    name="text-area"
-    rows="10"
-    cols="100"
-    form="review-input"
-  ></textarea>
-  <button id="review-btn" type="submit">Submit</button>
-</form>
+
 <script src="./js/review.js"></script>
 <script src="https://kit.fontawesome.com/78de80bbe9.js" crossorigin="anonymous"></script>
-

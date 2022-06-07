@@ -1,83 +1,79 @@
-<h1 class="logo">Just Park It!</h1>
+<h1 id="logo1">Just Park It!</h1>
 <div class="nav-body">
-      <div class="navigation">
-        <ul>
-          <li class="list active">
-            <a href="/">
-              <span class="icon">
-                <i class="fa-solid fa-house"></i>
-              </span>
-              <span class="text">Home</span>
-            </a>
-          </li>
-          <li class="list">
-            <a href="/dashboard">
-              <span class="icon">
-                <i class="fa-solid fa-square-plus"></i>
-              </span>
-              <span class="text">New Post</span>
-            </a>
-          </li>
-          <li class="list">
-            <a href="#">
-              <span class="icon">
-                <i class="fa-solid fa-user"></i>
-              </span>
-              <span class="text">Profile</span>
-            </a>
-          </li>
-          <li class="list">
-            <a href="https://github.com/Noah8863/Just-Park-It" target="_blank">
-              <span class="icon">
-                <i class="fa-solid fa-address-book"></i>
-              </span>
-              <span class="text">Contact</span>
-            </a>
-          </li>
-          <li class="list">
-            <a href="/login" id="logout">
-              <span class="icon">
-                <i class="fa-solid fa-person-walking-arrow-right"></i>
-              </span>
-              <span class="text">Logout</span>
-            </a>
-          </li>
-          {{!-- <div class="indicator"></div> --}}
-        </ul>
-      </div>
-    </div>
+  <div class="navigation">
+    <ul>
+      <li class="list active">
+        <a href="/">
+          <span class="icon">
+            <i class="fa-solid fa-house"></i>
+          </span>
+          <span class="text">Home</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="/dashboard">
+          <span class="icon">
+            <i class="fa-solid fa-square-plus"></i>
+          </span>
+          <span class="text">New Post</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#">
+          <span class="icon">
+            <i class="fa-solid fa-user"></i>
+          </span>
+          <span class="text">Profile</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="https://github.com/Noah8863/Just-Park-It" target="_blank">
+          <span class="icon">
+            <i class="fa-solid fa-address-book"></i>
+          </span>
+          <span class="text">Contact</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="/login" id="logout">
+          <span class="icon">
+            <i class="fa-solid fa-person-walking-arrow-right"></i>
+          </span>
+          <span class="text">Logout</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
 {{#each reviews as |review| }}
 
 <div class="newsfeedContainer">
   <div class="profileContainer">
-    <h2>{{review.name}}</h2> <br>
+    <h1>{{review.name}}</h1> <br>
     <a> Post Made At: {{format_date review.date_created}} </a> <br>
     <p id="sizeOfCarContainer">{{review.carSize}}</p>
     <p id="typeOfCarContainer">{{review.name}} Drives A: {{review.carMake}}</p>
   </div>
-      <div class="newsfeed">
-        <h1 id="titleText">{{title}}</h1>
+  <div class="newsfeed">
+    <h1 id="titleText">{{title}}</h1>
 
-
-
-       
-        {{!-- If we have time lets add a href to the anchor tag so the address will be clickable --}}
-        <a id="addressContainer" href="http://www.google.com/search?q={{review.address}}" target="_blank">{{review.address}}</a> <br>
-        {{!-- Couldnt figure out the mechanics behind this system --}}
-        {{!-- <a class="fa fa-star" id="1starFinal"></a>
-        <a class="fa fa-star" id='2starFinal'></a>
-        <a class="fa fa-star" id="3starFinal"></a>
-        <a class="fa fa-star" id="4staFinalr"></a>
-        <a class="fa fa-star" id="5staFinalr"></a> --}}
-        <p id="parkingType">{{review.parkingType}}</p>
-        <p class="postInfo">
-          {{review.description}}
-        </p>
-      </div>
-    </div>
+    {{!-- If we have time lets add a href to the anchor tag so the address will be clickable --}}
+    <a id="addressContainer" href="http://www.google.com/search?q={{review.address}}"
+      target="_blank">{{review.address}}</a> <br>
+    {{!-- Couldnt figure out the mechanics behind this system --}}
+    {{!-- <a class="fa fa-star" id="1starFinal"></a>
+    <a class="fa fa-star" id='2starFinal'></a>
+    <a class="fa fa-star" id="3starFinal"></a>
+    <a class="fa fa-star" id="4staFinalr"></a>
+    <a class="fa fa-star" id="5staFinalr"></a> --}}
+    <p id="parkingType">{{review.parkingType}}</p>
+    <p class="postInfo">
+      {{review.description}}
+    </p>
   </div>
+</div>
 
 {{/each}}
+
 <script src="./js/homepage.js"></script>
 <script src="https://kit.fontawesome.com/78de80bbe9.js" crossorigin="anonymous"></script>
-

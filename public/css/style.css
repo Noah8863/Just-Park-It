@@ -1,8 +1,3 @@
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
 body {
   font-family: "Rubik", sans-serif;
   font-family: "Source Sans Pro", sans-serif;
@@ -10,6 +5,7 @@ body {
   transition-duration: 2s;
   transition-property: opacity;
 }
+
 body.fade {
   opacity: 0;
 }
@@ -21,6 +17,18 @@ input {
   width: 80%;
   margin: 10px 0;
   padding: 10px;
+}
+#logo1 {
+  position: absolute;
+  margin-top: 20px;
+  left: 10%;
+  font-size: xx-large;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-shadow: 0px 0px 40px 10px #ade9f0;
+  background-image: linear-gradient(rgb(142, 210, 241), #ade9f0);
 }
 .logo {
   position: absolute;
@@ -97,7 +105,7 @@ input {
   text-align: center;
 }
 .signup-container {
-  background-image: linear-gradient(rgb(142, 210, 241), rgb(43, 159, 236));
+  background-color: #ade9f0;
   right: 0;
   text-align: center;
 }
@@ -139,21 +147,21 @@ input {
 }
 #loginbtn {
   position: relative;
-  background-color: rgb(101, 167, 241);
+  background-image: linear-gradient(rgb(142, 210, 241), #ade9f0);
   width: 45%;
   height: 35px;
   border-radius: 25px;
 }
 #signupbtn {
   position: relative;
-  background-color: rgb(101, 167, 241);
+  background-image: linear-gradient(rgb(142, 210, 241), #ade9f0);
   width: 60%;
   height: 30px;
   border-radius: 25px;
 }
 #registerbtn {
   position: relative;
-  background-color: rgb(101, 167, 241);
+  background-image: linear-gradient(rgb(142, 210, 241), #ade9f0);
   width: 40%;
   height: 30px;
   border-radius: 25px;
@@ -200,7 +208,7 @@ input {
   justify-content:center;
   align-items: center;
   border-radius: 50px;
-  background-image: linear-gradient(rgb(142, 210, 241), rgb(43, 159, 236));
+  background-image: linear-gradient(rgb(142, 210, 241), #ade9f0);
 }
 .navigation ul {
   display: flex;
@@ -251,17 +259,6 @@ input {
 .navigation ul li:hover a .text {
   opacity: 1;
   transform: translateY(5px);
-}
-.indicator {
-  position: absolute;
-  top: 5%;
-  left: 36%;
-  width: 70px;
-  height: 70px;
-  background:rgb(101, 167, 241);
-  border-radius: 50%;
-  border: 6px solid var(--clr);
-  transition: 0.5s;
 }
 .navigation ul li:nth-child(1).active ~ .indicator {
   transform: translatex(calc(70px * 0));
@@ -347,6 +344,7 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 .newsfeedContainer {
+  position: relative;
   display: grid;
   grid-template-columns: 30% auto;
   margin-top: 5%;
@@ -356,12 +354,12 @@ input:checked + .slider:before {
   text-align: center;
   position: relative;
   margin-left: 2%;
-  background-image: linear-gradient(rgb(142, 210, 241), rgb(43, 159, 236));
+  background-image: linear-gradient(rgb(142, 210, 241), #ade9f0);
   height: 100%;
 }
 .profileContainer {
   text-align: center;
-  background-image: linear-gradient(rgb(142, 210, 241), rgb(43, 159, 236));
+  background-image: linear-gradient(rgb(142, 210, 241), #ade9f0);
 }
 .postInfo {
   position: relative;
@@ -371,18 +369,12 @@ input:checked + .slider:before {
 }
 
 .dashboard {
-  background-image: linear-gradient(rgb(142, 210, 241), rgb(43, 159, 236));
   text-align: center;
-  height: auto;
-  margin-top:5%;
-  margin-left: 10%;
-  margin-right: 10%;
-  padding: 15px;
 }
 #review-btn {
   width: 60px;
   height: 30px;
-  margin-top: 40px;
+  margin-top: 10px;
 }
 .fa-star {
   background: none;
@@ -395,15 +387,15 @@ input:checked + .slider:before {
 }
 #review-input {
   position: relative;
-  background-color: rgb(255, 255, 255);
   margin-left: 10%;
   margin-right: 10%;
   padding: 10px;
   text-align: center;
+  top: -80;
 }
 #title, #carMake, #carSize, #parkingType, #address{
   margin-left: 10%;
-  background-color: rgb(173, 173, 173);
+  background-color: rgb(209, 233, 235);
   opacity: 0.8
 }
 #title:hover{
@@ -435,9 +427,17 @@ input:checked + .slider:before {
   opacity: 0.8;
   transition: 0.6s
 }
-.reviewContainer {
-  margin-top: 10%;
-}
 .checked {
   color: orange;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #ade9f0;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
 }

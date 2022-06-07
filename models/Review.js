@@ -19,6 +19,22 @@ Reviews.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    address: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    carMake: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    carSize: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     date_created: {
       type: DataTypes.DATE,
       allowNull: false,

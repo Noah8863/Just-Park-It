@@ -23,32 +23,33 @@ const loginFormHandler = async (event) => {
 };
 
 const signupFormHandler = async (event) => {
-  event.preventDefault();
+  // event.preventDefault();
 
   const name = document.querySelector("#name-signup").value.trim();
   const email = document.querySelector("#email-signup").value.trim();
   const password = document.querySelector("#password-signup").value.trim();
-  
-  const password1 = document.getElementById("password-signup")
-  const confirmPassword = document.getElementById("confirm-passowrd")
 
-  
-  console.log(name, email, password);
-  if (name && email && password) {
-    const response = await fetch("/api/user", {
-      method: "POST",
-      body: JSON.stringify({ name, email, password }),
-      headers: { "Content-Type": "application/json" },
-      // console.log('success');
-    });
-    console.log("success");
-    if (response.ok) {
-      document.location.replace("/");
+
+    console.log(name, email, password);
+    if (name && email && password) {
+      const response = await fetch("/api/user", {
+        method: "POST",
+        body: JSON.stringify({ name, email, password }),
+        headers: { "Content-Type": "application/json" },
+        // console.log('success');
+      });
+      console.log("success");
+      if (response.ok) {
+        document.location.replace("/");
+      } else {
+        alert(response.statusText);
+      }
     } else {
-      alert(response.statusText);
+      console.log('Dont match')
+      alert('Passwords do not match!');
     }
   }
-};
+
 
 document
   .querySelector(".login-form")
@@ -105,4 +106,5 @@ function moveback() {
     signupContainer.classList.toggle("moveback");
   }
 }
+
 

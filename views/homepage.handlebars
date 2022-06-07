@@ -1,8 +1,6 @@
 {{!-- map reviews --}}
 {{!-- map reviews --}}
-{{#each reviews as |review| }}
-    <div class="nav-body">
-      <div class="navigation">
+    <div class="navigation">
         <ul>
           <li class="list active">
             <a href="/">
@@ -48,16 +46,19 @@
         </ul>
       </div>
     </div>
+{{#each reviews as |review| }}
+    <div class="nav-body">
+  
 <div class="newsfeedContainer">
       <div class="newsfeed">
         <h1 id="title">{{Title}} This is where the Title Goes</h1>
         <h2>{{review.name}}</h2>
         <a>{{format_date review.date_created}} </a> <br>
         {{!-- If we have time lets add a href to the anchor tag so the address will be clickable --}}
-        <a id="addressContainer">Address Here</a>
+        {{!-- <a id="addressContainer">Address Here</a>
         <p id="sizeOfCarContainer">Size of Car Here</p>
         <p id="typeOfCarContainer">Type of Car Here</p>
-        <p class="postInfo">
+        <p class="postInfo"> --}}
           {{review.description}}
         </p>
       </div>

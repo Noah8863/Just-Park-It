@@ -3,59 +3,154 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/test.css">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body>
-    <div class="nav-body">
-        <div class="navigation">
-            <ul>
-                <li class="list active">
-                    <a href="#">
-                        <span class="icon">
-                            <i class="fa-solid fa-house"></i>
-                        </span>
-                        <span class="text">Home</span>
-                    </a>
-                </li>
-                <li class="list">
-                    <a href="#">
-                        <span class="icon">
-                            <i class="fa-solid fa-square-plus"></i>
-                        </span>
-                        <span class="text">New Post</span>
-                    </a>
-                </li>
-                <li class="list">
-                    <a href="#">
-                        <span class="icon">
-                            <i class="fa-solid fa-user"></i>
-                        </span>
-                        <span class="text">Profile</span>
-                    </a>
-                </li>
-                <li class="list">
-                    <a href="#">
-                        <span class="icon">
-                            <i class="fa-solid fa-address-book"></i>
-                        </span>
-                        <span class="text">Contact</span>
-                    </a>
-                </li>
-                <li class="list">
-                    <a href="#">
-                        <span class="icon">
-                            <i class="fa-solid fa-person-walking-arrow-right"></i>
-                        </span>
-                        <span class="text">Logout</span>
-                    </a>
-                </li>
-              <div class="indicator"></div>  
-            </ul>
+  <!-- Main container -->
+   <div class="container main">
+       <!-- Add row for main container -->
+        <div class="row">
+            <!-- Form column (This is the right column ) -->
+            <div class="col-md-6 h-75 d-inline-block">
+                <!-- Add we give it ID of cardForm -->
+                <div id="cardForm" class="card shadow p-3 mb-5 bg-white rounded">
+                    <!-- thanks message  -->
+                    <h2 id="main-section" class="h2 text-center"></h2>
+                    <!--Add progress bar (Bootstrap progress bar)  -->
+                    <div class="progress">
+                        <!-- ID of prBar (By default width is 25%) -->
+                        <div id="prgBar" class="progress-bar" style="width:25%">5%</div>
+                    </div>
+                    <!-- Add form with ID of stepper-form (Using bootstrap class) -->
+                    <form id="stepper-form" method="POST" class="was-validated">
+                        <!-- So in this part we are going to devid our form body in 3 sections (Note: you can add as  many sections you want) -->
+                        <section id="step-1"> 
+                            <!-- Section 1 contains: -->
+
+                            <!-- Title of the section -->
+                            <h5 class="h5 text-center">PERSONAL DETAILS</h5>
+                            <!-- Add a div with class of form-group -->
+                            <div class="form-group">
+                                <!-- Label: first name -->
+                                <label for="fname">Fisrt name:</label>
+                                <!-- Input class: form-control and ID form-fname and name: fname -->
+                                <input type="text" class="form-control" id="form-fname" placeholder="Enter first name"
+                                    name="fname" required>
+                                    <!-- And add a class: valid-feedback -->
+                                <div class="valid-feedback">Valid.</div>
+                                <!-- And a class: invalid-feedback (Bootstrap class) -->
+                                <div class="invalid-feedback">Please fill out this field.</div>
+                            </div>
+                            <div class="form-group">
+                                <!-- Lastname -->
+                                <label for="uname">Last name:</label>
+                                <input type="text" class="form-control" id="form-lname" placeholder="Enter last name"
+                                    name="lname" required>
+                                  <!-- And add a class: valid-feedback -->
+                                  <div class="valid-feedback">Valid.</div>
+                                  <!-- And a class: invalid-feedback (Bootstrap class) -->
+                                  <div class="invalid-feedback">Please fill out this field.</div>
+                            </div>
+                            <div class="form-group">
+                                <!-- Eamil -->
+                                <label for="email">Email:</label>
+                                <input type="email" class="form-control" id="form-email" placeholder="Enter email"
+                                    name="email" required>
+                                  <!-- And add a class: valid-feedback -->
+                                  <div class="valid-feedback">Valid.</div>
+                                  <!-- And a class: invalid-feedback (Bootstrap class) -->
+                                  <div class="invalid-feedback">Please fill out this field.</div>
+                            </div>
+                            <!-- /End of section 1 -->
+
+                        </section>
+                        <!-- Section 2 and let give ID: section 2 -->
+                        <section id="step-2">
+                            <!-- Title and bootstrap class-->
+                            <h5 class="h5 text-center">ABOUT COMPANY</h5>
+                            <!-- div with class: form-group -->
+                            <div class="form-group">
+                                <!-- Label: company -->
+                                <label for="company">Company name:</label>
+                                <input type="text" class="form-control" id="form-company-name"
+                                    placeholder="Enter Company name" name="company-name" required>
+                                 <!-- And add a class: valid-feedback -->
+                                 <div class="valid-feedback">Valid.</div>
+                                 <!-- And a class: invalid-feedback (Bootstrap class) -->
+                                 <div class="invalid-feedback">Please fill out this field.</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="branch">Branch:</label>
+                                <input type="text" class="form-control" id="form-branch" placeholder="Enter branch"
+                                    name="branch" required>
+                                  <!-- And add a class: valid-feedback -->
+                                  <div class="valid-feedback">Valid.</div>
+                                  <!-- And a class: invalid-feedback (Bootstrap class) -->
+                                  <div class="invalid-feedback">Please fill out this field.</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd">Product:</label>
+                                <input type="text" class="form-control" id="form-product" placeholder="Enter product"
+                                    name="product" required>
+                                  <!-- And add a class: valid-feedback -->
+                                  <div class="valid-feedback">Valid.</div>
+                                  <!-- And a class: invalid-feedback (Bootstrap class) -->
+                                  <div class="invalid-feedback">Please fill out this field.</div>
+                            </div>
+                           
+                        </section>
+                        <!-- /End of section 2 -->
+                        <section id="step-3">
+                            <!-- Section 3 -->
+                            <!-- Ttile  -->
+                            <h5 class="h5 text-center">ADDRESS DETAILS</h5>
+                            <!-- Div with a class: form-group -->
+                            <div class="form-group">
+                                <!-- Label: country -->
+                                <label for="country-name">Country:</label>
+                                <input type="text" class="form-control" id="form-country" placeholder="Enter country"
+                                    name="country-name" required>
+                                 <!-- And add a class: valid-feedback -->
+                                 <div class="valid-feedback">Valid.</div>
+                                 <!-- And a class: invalid-feedback (Bootstrap class) -->
+                                 <div class="invalid-feedback">Please fill out this field.</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="city">City:</label>
+                                <input type="text" class="form-control" id="form-city" placeholder="Enter city"
+                                    name="city" required>
+                                  <!-- And add a class: valid-feedback -->
+                                  <div class="valid-feedback">Valid.</div>
+                                  <!-- And a class: invalid-feedback (Bootstrap class) -->
+                                  <div class="invalid-feedback">Please fill out this field.</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd">Phone:</label>
+                                <input type="phone" class="form-control" id="form-phone" placeholder="Enter password"
+                                    name="pswd" required>
+                                  <!-- And add a class: valid-feedback -->
+                                  <div class="valid-feedback">Valid.</div>
+                                  <!-- And a class: invalid-feedback (Bootstrap class) -->
+                                  <div class="invalid-feedback">Please fill out this field.</div>
+                            </div>
+                        </section>
+                        <!-- /End of section 3 -->
+                        <!-- Button preview (Back) with ID: of prev-->
+                        <button id="prev" type="button" class="btn btn-primary">Previous</button>
+                        <!-- Button next and submit with ID: next -->
+                        <button id="next" type="button" class="btn btn-primary">Next</button>
+                    </form>
+                    <!-- /End -->
+                </div>
+            </div>
+            <!-- Column to show from data (class: col-md-6 ...) -->
         </div>
-    </div>
-    <script src="public/js/homepage.js"></script>
-    <script src="https://kit.fontawesome.com/78de80bbe9.js" crossorigin="anonymous"></script>
+   </div>
+<script src="public/js/review.js"></script>
+<script src="https://kit.fontawesome.com/78de80bbe9.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

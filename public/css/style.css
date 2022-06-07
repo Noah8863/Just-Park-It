@@ -368,27 +368,11 @@ input:checked + .slider:before {
   text-align: end;
   background-color: white;
 }
-#addressContainer {
-  position: relative;
-  display:inline-block;
-  margin-top: 5%;
-  margin-left: 10%;
-  margin-right: 10%;
-}
-#typeOfCarContainer {
-  position: relative;
-  display: inline-block;
-  margin-top: 5%;
-  margin-left: 10%;
-  margin-right: 10%;
-}
-#sizeOfCarContainer {
-  position: relative;
-  display: inline-block;
-  margin-top: 5%;
-  margin-left: 10%;
-  margin-right: 10%;
-}
+
+
+
+
+
 #title {
   font-size: xx-large;
 }
@@ -396,17 +380,6 @@ input:checked + .slider:before {
   margin-left: 10%;
   margin-right: 10%;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 #cardForm {
   display: flex;
@@ -559,7 +532,6 @@ select.form-control {
 .list-group-item{
   padding: 10px;
 }
-/* Social media icons */
 .icon-bar {
   position: fixed;
   top: 50%;
